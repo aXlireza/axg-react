@@ -1,0 +1,70 @@
+.cover {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(50px);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.item {
+  display: block;
+  position: absolute;
+  z-index: 0;
+}
+
+.small {
+  width: 17vw;
+  height: 17vw;
+}
+
+.medium {
+  width: 25vw;
+  height: 25vw;
+}
+
+.veryLeft {
+  left: -3%;
+}
+
+.midLeft {
+  left: 10%;
+}
+
+.left {
+  left: 0%;
+}
+
+.right {
+  right: 0;
+}
+
+.veryRight {
+  right: -3%;
+}
+
+.bottom {
+  bottom: 0
+}
+
+.veryBottom {
+  bottom: -10%
+}
+
+.bitLeft {
+  left: 30vw;
+}
+
+.top {
+  top: 0;
+}
+
+.midTop {
+  top: 10%;
+}
+
+.circle {
+  border-radius: 50%;
+}

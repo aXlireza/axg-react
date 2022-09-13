@@ -1,0 +1,46 @@
+$mobileBreakpoint: 600px;
+$tabletBreakpoint: 768px;
+
+/* form */
+.form {
+  margin-top: 3px;
+  width: 100%;
+
+  @media screen and (max-width: $mobileBreakpoint) {
+    width: '100%';
+  }
+}
+
+
+
+/* textare */
+.textare {
+  width: 383px;
+  border: 1px solid rgb(205, 205, 205);
+  background-color: #0000;
+  border-radius: 1em;
+  padding: 8px;
+  outline: none;
+  height: 168px;
+  font-size: var(--small-text-fontSize);
+}
+
+/* submit */
+.submit {
+  width: 100%;
+  border: 1px solid var(--green);
+  background-color: #4ad3950f;
+  border-radius: 1em;
+  color: var(--green);
+  padding: 8px;
+  outline: none;
+  height: 40px;
+  margin-top: 20px;
+  transition: all .3s;
+}
+
+.submit:hover {
+  background-color: var(--green);
+  color: #fff;
+  cursor: pointer;
+}
