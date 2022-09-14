@@ -19,14 +19,14 @@ export default function Menu({menuItems}) {
       {menuItems.map((item, key) => (
         <axg-element
           key={key}
-          mode='dropdown'
+          mode="dropdown"
           height="50"
-          color='var(--darkColor)'
-          colorHover='#000'
-          activeBackground='var(--darkColor)'
-          headBackground='#0000'
-          headBackgroundHover='var(--bg3)'
-          structure='link'
+          color={item.color}
+          colorHover={item.activeColor}
+          activeBackground={item.activeBg}
+          headBackground="#0000"
+          headBackgroundHover={item.activeBg}
+          structure="link"
           title={item.name}
           link={item.uri}
           breakpoint="700"
