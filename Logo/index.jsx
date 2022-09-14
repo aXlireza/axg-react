@@ -1,12 +1,12 @@
-import Image from 'next/image'
+import Image from 'next/future/image'
 import Link from 'next/link'
 import style from './style.module.css'
 
 export default function Logo({src}) {
   return (
-    <Link href="/">
-      <a className={style.headerLogo}>
-        <Image layout='fixed' width="90" height="23" src={src} alt="logo" />
+    <Link style={{display: 'block'}} href="/">
+      <a style={{display: 'block'}} className={style.headerLogo}>
+        <Image layout='responsive' width={60} height={40} src={src} alt="logo" />
       </a>
     </Link>
   )

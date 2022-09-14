@@ -1,8 +1,8 @@
 .headerLogo img {
-    width: auto;
+    /* width: auto;
     height: 4vw;
-    min-height: 40px;
+    min-height: 40px; */
 }
 .headerLogo {
-    display: flex;
+    /* display: flex; */
 }
