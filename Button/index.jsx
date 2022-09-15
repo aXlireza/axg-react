@@ -24,15 +24,9 @@ export default function Button({ iconSize, icon, height="100%", text='Button', l
   let result;
 
   switch (mode) {
-    case 'button':
-      result = buttonBody
-      break;
-    case 'link':
-      result = linkBody
-      break;
-    default:
-      result = buttonBody
-      break;
+    case 'button': result = buttonBody; break;
+    case 'link': result = linkBody; break;
+    default: result = buttonBody; break;
   }
 
   return result;
