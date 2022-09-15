@@ -41,6 +41,10 @@ body * {
   box-sizing: border-box;
 }
 
+.separator {
+  height: var(--l6-text-fontSize);
+}
+
 .scroll {
   overflow: scroll;
 }
@@ -103,6 +107,15 @@ body * {
   align-items: flex-start!important;
 }
 
+.righty {
+  align-items: flex-start;
+}
+.righty.centerOnTablet {
+  @media screen and (max-width: $tabletBreakpoint) {
+    align-items: center;
+  }
+}
+
 .lefty {
   align-items: flex-start;
 }
@@ -151,6 +164,14 @@ body * {
   flex-direction: column;
   flex-wrap: nowrap;
 }
+.vertical.horizontalTabletBreak {
+  @media screen and (max-width: $tabletBreakpoint) {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    column-gap: 10px;
+  }
+}
 
 .centerMarge {
   justify-content: center;
@@ -161,14 +182,14 @@ body * {
   margin: 5px 1vw;
 }
 
-  .splitToLeft, .splitToRight {
-    @media screen and (max-width: $tabletBreakpoint) {
+.splitToLeft, .splitToRight {
+  @media screen and (max-width: $tabletBreakpoint) {
     grid-template-columns: none;
     grid-auto-flow: row;
     display: grid;
     justify-content: space-between!important;
-    }
   }
+}
 @media screen and (max-width: $tabletBreakpoint) {
   .horizontal {
     width: 100%;
