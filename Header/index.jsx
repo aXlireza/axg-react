@@ -4,11 +4,11 @@ import Logo from '../Logo'
 import Searchbar from '../Searchbar'
 import Menu from '../Menu'
 
-export default function Header({menuItems = [], SearchbarPlaceholder = "Search..."}) {
+export default function Header({searchbar=true, menuItems = [], SearchbarPlaceholder = "Search..."}) {
   return (
     <header className={style.header}>
       <Logo src="/images/logo.png" />
-      <Searchbar placeholder={SearchbarPlaceholder} hideAtTop={false}/>
+      {searchbar ? <Searchbar placeholder={SearchbarPlaceholder} hideAtTop={false}/> : ''}
       <Menu menuItems={menuItems} />
     </header>
   )
