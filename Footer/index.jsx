@@ -19,7 +19,7 @@ export default function Footer({children, links, socialMedia}) {
       <section className='subcontainer horizontal spread'>
         <Icons id="footerSocialMedia" margin={1} columnGap={1}
           icons={socialMedia.map(({icon: unicode, link: url, img}) => ({
-            isfont:img ? 0 : 1, img, unicode, size:'tiny', color:'#fff', plane:1, boxshadow:0, url}))}
+            isfont:img ? 0 : 1, img, unicode, size:'tiny', color:'var(--tertiaryTextColor)', plane:1, boxshadow:0, url}))}
         />
         <Text color="var(--light)" tag="p" nomargin={1} customClass={['paragraph', 'center']}>
           {children}
