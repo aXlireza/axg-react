@@ -1,29 +1,53 @@
-import Link from 'next/link'
-import Icon from '../Icon'
-import style from './style.module.css'
+import { useEffect } from 'react'
 
-export default function Button({ onClick, iconSize, icon, height="100%", text='Button', link='/', bg='var(--blue)', color="", size='normal', mode='button'} = {}) {
-  const inner = (
-    <div style={{height:height}} className={`${icon ? style.iconButton : ''} ${style.inner}`}>
-      {icon ? <Icon size={iconSize} src={icon} plane={1} /> : ''}
-      <span style={{height:height, backgroundColor:bg}} className={style.buttonBg}></span>
-      <span style={{height:height, color:color}} className={style.buttonText}>{text}</span>
-    </div>
-  )
+export default function Button({
+  iconclasses,
+  plane,
+  roundlevel,
+  customclasses,
+  onClick,
+  iconSize,
+  icon,
+  height,
+  text,
+  link,
+  bg,
+  color,
+  size,
+  mode,
+  dev,
+  id,
+  innerclasses,
+  textfontsize,
+  textclasses,
+  activecolor,
+  hovercolor,
+} = {}) {
+  
+  useEffect(() => {
+    if (document.getElementById(id) && onClick) test.addEventListener('click', onClick)
+  }, [])
 
-  const buttonBody = (
-    <button onClick={onClick} style={size ? {} : {height:height}} className={`${style[size]} ${style.button}`}>{inner}</button>
-  )
-
-  const linkBody = (
-    <Link style={size ? style[size] : {height:height}} href={link}>
-      <a onClick={onClick} className={`${style[size]} ${style.button}`}>{inner}</a>
-    </Link>
-  )
-
-  switch (mode) {
-    case 'button': return buttonBody;
-    case 'link': return linkBody;
-    default: return buttonBody;
-  }
+  return <axg-element
+    mode={mode || 'button_v1'}
+    dev={dev}
+    id={id}
+    plane={plane}
+    iconsize={iconSize}
+    iconclasses={iconclasses}
+    icon={icon}
+    height={height}
+    text={text}
+    link={link}
+    bg={bg}
+    color={color}
+    size={size}
+    customclasses={customclasses}
+    roundlevel={roundlevel}
+    innerclasses={innerclasses}
+    textfontsize={textfontsize}
+    textclasses={textclasses}
+    activecolor={activecolor}
+    hovercolor={hovercolor}
+  ></axg-element>
 }

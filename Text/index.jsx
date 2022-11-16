@@ -1,13 +1,23 @@
-import React from 'react'
-import style from './style.module.css'
-
-export default function Text({ size, align, children, tag='h1', color='var(--dark)', text='', customClass=[''], inlineStyle, nomargin=0 }) {
-  return React.createElement(
-    tag,
-    {
-      className: `${style.default} ${customClass.map(cclass => style[cclass]).join(' ')} ${nomargin ? style.nomargin : ''}`,
-      style: {...inlineStyle, color: color, textAlign: align, fontSize: size}
-    },
-    children||text
-  )
+export default function Text({ innercustomclasses, textalign, subtextalign, svg, textfontsize, link, textcolor, textclasses, subtext, subtextclasses, subtextcolor, subtextfontsize, iconclass, svgtextfontsize, dev, size, align, children, tag='h1', color='var(--dark)', text='', customclasses, inlinestyle, nomargin=0 }) {
+  return <axg-element
+    mode={'text_v1'}
+    dev={dev}
+    customclasses={customclasses}
+    nomargin={nomargin}
+    link={link}
+    text={text}
+    textfontsize={textfontsize}
+    textcolor={textcolor}
+    textclasses={textclasses}
+    subtext={subtext}
+    subtextclasses={subtextclasses}
+    subtextcolor={subtextcolor}
+    subtextfontsize={subtextfontsize}
+    iconclass={iconclass}
+    svg={svg}
+    textalign={textalign}
+    subtextalign={subtextalign}
+    innercustomclasses={innercustomclasses}
+    inlinestyle={inlinestyle}
+  />
 }

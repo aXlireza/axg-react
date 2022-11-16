@@ -1,6 +1,6 @@
+import dynamic from 'next/dynamic'
 
-import Text from '../Text'
-
+const Text = dynamic(() => import('../Text'), {ssr: false,})
 export default function SubHeader({top, mainTitle, description}) {
   return (
     <section className='container vertical righty' style={{rowGap: '0px', backgroundColor: 'var(--tertiaryColor)'}}>

@@ -1,9 +1,11 @@
 import Image from "next/image";
 import style from './style.module.css'
-import Text from '../Text';
 import Statics from '../Statics';
 import Starts from '../Stars';
-import Button from '../Button';
+import dynamic from "next/dynamic";
+
+const Button = dynamic(() => import('../Button'), {ssr: false,})
+const Text = dynamic(() => import('../Text'), {ssr: false,})
 
 export default function BannerItem({ image, text, statics, starRate, link }) {
   return (

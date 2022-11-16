@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import style from './style.module.css'
 import Icons from '../Icons'
-import Text from '../../components/Text'
-
+import dynamic from 'next/dynamic'
+const Text = dynamic(() => import('../Text'), {ssr: false,})
 export default function Footer({children, links, socialMedia}) {
   return (
     <footer className={`container vertical ${style.footer}`}>
@@ -21,7 +21,7 @@ export default function Footer({children, links, socialMedia}) {
           icons={socialMedia.map(({icon: unicode, link: url, img}) => ({
             isfont:img ? 0 : 1, img, unicode, size:'tiny', color:'var(--tertiaryTextColor)', plane:1, boxshadow:0, url}))}
         />
-        <Text color="var(--light)" tag="p" nomargin={1} customClass={['paragraph', 'center']}>
+        <Text color="var(--light)" tag="p" nomargin={1} customclasses={'paragraph center'}>
           {children}
         </Text>
       </section>

@@ -1,9 +1,9 @@
 import { useEffect } from "react"
-import { loadScript, axgCdnHAndler } from "../../lib/script"
+import { loadScript } from "../../lib/script"
 
 export default function ActivationHandler() {
   useEffect(() => {
-    loadScript(`${process.env.LocalAxg}/layoutactivationJs`)
+    loadScript(`${process.env.BetaAxg}/layoutactivationJs`)
     .then(() => activationHandler.init())
   }, [])
   return '';

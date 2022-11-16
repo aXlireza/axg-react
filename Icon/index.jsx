@@ -1,8 +1,9 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import Text from '../Text'
+const Text = dynamic(() => import('../Text'), {ssr: false,})
 import style from './style.module.css'
 import { useEffect, useState } from 'react'
+import dynamic from 'next/dynamic'
 
 
 
@@ -87,7 +88,7 @@ export default function Icon({
         ) */}
       </div>)
     }
-    {name ? <Text tag='p' text={name} className={style.text} customClass={['boxTitle']}/> : ''}
+    {name ? <Text tag='p' text={name} className={style.text} customclasses={'boxTitle'}/> : ''}
   </>)
 
   const classes = `${margin ? style.margin : ''} ${limit ? style.limit : ''} ${boxshadow ? style.boxshadow : ''} ${style.iconBody} ${style[size]} ${name ? style.split : style.center}`

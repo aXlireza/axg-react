@@ -1,9 +1,7 @@
 import Image from "next/image"
-import Text from "../../Text"
-import AxgButton from "../../Button"
+const Text = dynamic(() => import('../../Text'), {ssr: false,})
 import Statics from "../../Statics"
-// import Modal from "../../Modal"
-
+const AxgButton = dynamic(() => import('../../Button'), {ssr: false,})
 import formStyle from './form.module.css'
 
 import { useForm} from 'react-hook-form'
@@ -158,11 +156,11 @@ export default function Product({image, alt, name, price, currency, description,
               <Text nomargin={1} text={"ویژگی های محصول"} color={"var(--primaryTextColor)"} size={"var(--l4-text-fontSize)"} />
             </section>
             <section className="subcontainer">
-              <Statics
+              {features ? <Statics
                 inlineStyle={{width: 'fit-content'}}
                 mode='list'
                 data={features.map(feature => ([...feature, 1]))}
-              />
+              /> : ''}
             </section>
           </section>
         </section>
