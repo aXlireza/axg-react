@@ -1,7 +1,5 @@
-import dynamic from 'next/dynamic'
 import Image from 'next/image'
-
-const Accordion = dynamic(() => import('../../axg-react/Accordion'), {ssr: false,})
+import Accordion from '../../../Accordion'
 
 export default function Accordions({posts}) {
 

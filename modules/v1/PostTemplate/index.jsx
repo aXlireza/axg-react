@@ -1,6 +1,6 @@
-import Image from '../../axg-react/Image'
-import Text from '../../axg-react/Text'
-import Button from '../../axg-react/Button'
+import Image from '../../../Image'
+import Text from '../../../Text'
+import Button from '../../../Button'
 
 export default function PostTemplate({
   image,

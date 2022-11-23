@@ -1,9 +1,6 @@
-import dynamic from 'next/dynamic'
-const Text = dynamic(() => import('../../axg-react/Text'), {ssr: false,})
-const Button = dynamic(() => import('../../axg-react/Button'), {ssr: false,})
-const Carousel = dynamic(() => import('../../axg-react/Carousel'), {ssr: false,})
-const PostTemplate = dynamic(() => import('../PostTemplate'), {ssr: false,})
-const SectionHead = dynamic(() => import('../SectionHead'), {ssr: false,})
+import Carousel from '../../../Carousel'
+import PostTemplate from '../PostTemplate'
+import SectionHead from '../SectionHead'
 
 export default function Articles({posts}) {
 
@@ -14,13 +11,14 @@ export default function Articles({posts}) {
     customclasses={'carousel_item articlessize'}
     innerclasses={'carousel_inneritem articlesinnersize productsListBorder'}
     title={post.title}
-    link={post.link}
+    link={`/shop/${post.acf.order_area.slug}/${post.slug}`}
     date={'محصولات ساینا را بررسی کنید'}
   />)
 
   return (
     <>
       <section className="container vertical padding_l0">
+
         <section className="subcontainer horizontal righty padding_l3">
           <SectionHead
             title={'محصولات ساینا'}
@@ -30,30 +28,6 @@ export default function Articles({posts}) {
             textcolor={'#fff'}
             subtextcolor={'var(--primaryColor)'}
           />
-          {/* <Button
-            text={''}
-            iconclasses={'tertiary_color secondary_bg round_l1 padding_l2 rexfont_init address-book rx_light'}
-            innerclasses={'padding_l0'}
-            size='large'
-            bg={'#0000'}
-            color={'var(--primaryColor)'}
-            height='49px'
-            plane={'1'}
-            link={'/shop'}
-          />
-          <Text
-            text={'محصولات ساینا'}
-            innercustomclasses={'wide_important'}
-            textcolor={'#fff'}
-            textclasses={'nomargin textstrokewhite widePadding_l9'}
-            textalign={'lefty'}
-            textfontsize={'var(--l9-text-fontSize)'}
-            subtext={'محصولات ساینا'}
-            subtextcolor={'var(--primaryColor)'}
-            subtextclasses={'subcontainer lefty nomargin wide abitoffthetop'}
-            subtextalign={'righty'}
-            subtextfontsize={'var(--l7-text-fontSize)'}
-          /> */}
         </section>
 
         <section className={'container wide'}>

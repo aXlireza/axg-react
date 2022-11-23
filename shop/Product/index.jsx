@@ -1,30 +1,31 @@
 import Image from "next/image"
-const Text = dynamic(() => import('../../Text'), {ssr: false,})
+import dynamic from "next/dynamic"
+
+const Text = dynamic(() => import('../../Text'), {ssr: false})
+const AxgButton = dynamic(() => import('../../Button'), {ssr: false})
 import Statics from "../../Statics"
-const AxgButton = dynamic(() => import('../../Button'), {ssr: false,})
 import formStyle from './form.module.css'
 
 import { useForm} from 'react-hook-form'
-import Button from '@mui/material/Button';
-import dynamic from "next/dynamic"
+import Button from '@mui/material/Button'
 
-const Box = dynamic(() => import('@mui/material/Box'), {ssr: false,})
-import FilledInput from '@mui/material/FilledInput';
-import InputLabel from '@mui/material/InputLabel';
-import FormControl from '@mui/material/FormControl';
-import SendIcon from '@mui/icons-material/Send';
-import Grid from '@mui/material/Grid';
+const Box = dynamic(() => import('@mui/material/Box'), {ssr: false})
+import FilledInput from '@mui/material/FilledInput'
+import InputLabel from '@mui/material/InputLabel'
+import FormControl from '@mui/material/FormControl'
+import SendIcon from '@mui/icons-material/Send'
+import Grid from '@mui/material/Grid'
 import Head from "next/head"
 import axios from "axios"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
-import rtlPlugin from 'stylis-plugin-rtl';
-import { prefixer } from 'stylis';
-import { CacheProvider } from '@emotion/react';
-import createCache from '@emotion/cache';
+import rtlPlugin from 'stylis-plugin-rtl'
+import { prefixer } from 'stylis'
+import { CacheProvider } from '@emotion/react'
+import createCache from '@emotion/cache'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
-import Select from '@mui/material/Select';
-import MenuItem from '@mui/material/MenuItem';
+import Select from '@mui/material/Select'
+import MenuItem from '@mui/material/MenuItem'
 
 export default function Product({image, alt, name, price, currency, description, features}) {
 
@@ -47,9 +48,7 @@ export default function Product({image, alt, name, price, currency, description,
       }
       else console.log(response.data)
     })
-    .catch(error => {
-      console.log(error);
-    });
+    .catch(error => console.log(error));
   }
   const { handleSubmit, register } = useForm({
     defaultValues: {
@@ -62,47 +61,41 @@ export default function Product({image, alt, name, price, currency, description,
     }
   })
 
-  const [popup, setPopup] = useState(false)
   const openPopup = (() => {
-    console.log('openPopup', popup);
-    if (popup) return;
+    activationHandler.start('formCover')
     formCover.classList.add(formStyle.open)
-    mainContent.classList.add(formStyle.shadowOuterDom)
-    setPopup(true)
+    axg_naturalizer.classList.add(formStyle.shadowOuterDom)
   })
 
   const closePopup = (() => {
-    console.log('closePopup', popup);
-    if (!popup) return;
+    activationHandler.end('formCover')
     formCover.classList.remove(formStyle.open)
-    mainContent.classList.remove(formStyle.shadowOuterDom)
-    setPopup(false)
+    axg_naturalizer.classList.remove(formStyle.shadowOuterDom)
   })
 
-  const popuptheForm = (() => {
-    if (!popup) openPopup()
-    else closePopup()
-  })
 
-  const theme = createTheme({
-    direction: 'rtl',
-  });
-  const cacheRtl = createCache({
-    key: 'muirtl',
-    stylisPlugins: [prefixer, rtlPlugin],
-  });
+  useEffect(() => {
+    window.addEventListener('load', () => {
+      axg_naturalizer.addEventListener("click", closePopup)
+      orderbtn.addEventListener('click', openPopup)
+    })
+  }, [])
 
-  const [transportedType, setTransportedType] = useState('none');
-  const [quantityState, setQuantityState] = useState(true);
+  const theme = createTheme({direction: 'rtl'})
+  const cacheRtl = createCache({key: 'muirtl', stylisPlugins: [prefixer, rtlPlugin]})
+
+  const [transportedType, setTransportedType] = useState('none')
+  const [quantityState, setQuantityState] = useState(true)
 
   const handleTransportedTypeChange = (event) => {
+    console.log(handleTransportedTypeChange);
     const newData = event.target.value
     setTransportedType(newData)
 
     // handle disabling or not the quantity field
     if (newData != 'none') setQuantityState(false)
     else setQuantityState(true)
-  };
+  }
 
   return (
     <>
@@ -110,9 +103,9 @@ export default function Product({image, alt, name, price, currency, description,
         <title>{name}</title>
       </Head>
       <section
-        onClick={closePopup}
+        // onClick={closePopup}
         id="mainContent"
-        className={`container splitToLeft horizontal ${formStyle.outerDom}`}
+        className={`rtl container splitToLeft horizontal ${formStyle.outerDom}`}
       >
         <section className="subcontainer">
           <div style={{display: 'block', width:'100%', height: '100%', position: 'relative'}}>
@@ -129,46 +122,46 @@ export default function Product({image, alt, name, price, currency, description,
           <section className="subcontainer vertical horizontalTabletBreak righty" style={{rowGap: '0px'}}>
             <section className="subcontainer lefty" style={{columnGap: '7px', width: 'fit-content'}}>
             {/* title */}
-              <Text text={name} nomargin={1} color={"var(--primaryTextColor)"} size={"var(--l7-text-fontSize)"} inlineStyle={{marginTop: `-1.8%`, marginBottom: '1%'}} />
+              <Text text={name} textclasses={'nomargin'} textcolor={"var(--primaryTextColor)"} textsize={"var(--l7-text-fontSize)"} inlineStyle={{marginTop: `-1.8%`, marginBottom: '1%'}} />
             </section>
             {/* price */}
             {price ? (
               <section className="subcontainer" style={{columnGap: '7px', width: 'fit-content'}}>
-                <Text text={price} nomargin={1} color={"var(--primaryTextColor)"} size={"var(--l2-text-fontSize)"} inlineStyle={{letterSpacing: '2px'}} />,
-                <Text text={currency} nomargin={1} color={"var(--primaryTextColor)"} size={"var(--l2-text-fontSize)"} />
+                <Text text={price} textclasses={'nomargin'} textcolor={"var(--primaryTextColor)"} textsize={"var(--l2-text-fontSize)"} inlineStyle={{letterSpacing: '2px'}} />,
+                <Text text={currency} textclasses={'nomargin'} textcolor={"var(--primaryTextColor)"} textsize={"var(--l2-text-fontSize)"} />
               </section>
             ) : ''}
           </section>
           {/* description */}
-          <Text text={description} color={"var(--primaryTextColor)"} size={"var(--l3-text-fontSize)"} />
+          <Text text={description} textcolor={"var(--primaryTextColor)"} textsize={"var(--l3-text-fontSize)"} />
           {/* request button */}
           <section className="subcontainer vertical righty centerOnTablet" style={{rowGap: '0px'}}>
-            <AxgButton onClick={popuptheForm} size="medium" text="ثبت درخواست" color="var(--light)" bg="var(--blue)" />
-            <Text nomargin={1} text={"*بزودی بعد ثبت درخواست و پر کردن فرم, با شما تماس گرفته خواهد شد"} color={"var(--secondaryTextColor)"} size={"var(--l1-text-fontSize)"} />
+            <AxgButton id="orderbtn" size="medium" text="ثبت درخواست" color="var(--light)" bg="var(--blue)" />
+            <Text textclasses={'nomargin'} text={"*بزودی بعد ثبت درخواست و پر کردن فرم, با شما تماس گرفته خواهد شد"} color={"var(--secondaryTextColor)"} textfontsize={"var(--l1-text-fontSize)"} />
           </section>
 
           {/* separator */}
           <section className="subcontainer separator"></section>
           
           {/* Product features list */}
-          <section className="subcontainer">
+          {features ? (
             <section className="subcontainer">
-              <Text nomargin={1} text={"ویژگی های محصول"} color={"var(--primaryTextColor)"} size={"var(--l4-text-fontSize)"} />
+              <section className="subcontainer">
+                <Text textclasses={'nomargin'} text={"ویژگی های محصول"} textcolor={"var(--primaryTextColor)"} textsize={"var(--l4-text-fontSize)"} />
+              </section>
+              <section className="subcontainer">
+                <Statics
+                  inlineStyle={{width: 'fit-content'}}
+                  mode='list'
+                  data={features.map(feature => ([...feature, 1]))}
+                />
+              </section>
             </section>
-            <section className="subcontainer">
-              {features ? <Statics
-                inlineStyle={{width: 'fit-content'}}
-                mode='list'
-                data={features.map(feature => ([...feature, 1]))}
-              /> : ''}
-            </section>
-          </section>
+          ) : ''}
         </section>
       </section>
       <section id="formCover" className={formStyle.formCover}>
-        <section id="formValidPop" className={formStyle.formValidPop}>
-سفارش شما ثبت شد, همکاران ما بزودی ما بزودی با شما تماس خواهند گرفت.
-        </section>
+        <section id="formValidPop" className={formStyle.formValidPop}>سفارش شما ثبت شد, همکاران ما بزودی ما بزودی با شما تماس خواهند گرفت.</section>
         <Box
           component="form"
           noValidate
@@ -178,12 +171,12 @@ export default function Product({image, alt, name, price, currency, description,
         >
           <Grid container spacing={1}>
             <Grid item xs={12}>
-              <Text nomargin={1} text={"لطفا اطلاعات خود را برای تماس وارد کنید"} color={"var(--primaryTextColor)"} size={"var(--l4-text-fontSize)"} />
+              <Text textclasses={'nomargin'} text={"لطفا اطلاعات خود را برای تماس وارد کنید"} textcolor={"var(--primaryTextColor)"} textsize={"var(--l4-text-fontSize)"} />
             </Grid>
             <CacheProvider value={cacheRtl}>
               <ThemeProvider theme={theme}>
                 <Grid item xs={12}>
-                  <Text nomargin={1} text="اطلاعات حقیقی/حقوقی" size={'small'} />
+                  <Text textclasses={'nomargin'} text="اطلاعات حقیقی/حقوقی" textsize={'var(--l1-text-fontSize)'} />
                 </Grid>
                 <Grid item xs={12} md={6}>
                   <FormControl sx={{ m: '1%', width: '100%' }} variant="filled" size="small" required={true}>
@@ -223,7 +216,7 @@ export default function Product({image, alt, name, price, currency, description,
                   </FormControl>
                 </Grid>
                 <Grid item xs={12}>
-                  <Text nomargin={1} text="اطلاعات باربری" size={'small'} />
+                  <Text textclasses={'nomargin'} text="اطلاعات باربری" textsize={'var(--l1-text-fontSize)'} />
                 </Grid>
                 <Grid item xs={12} md={6}>
                   <FormControl id="transporterTypeControl" sx={{ m: '1%', width: '100%' }} variant="filled" size="small">

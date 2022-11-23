@@ -3,7 +3,7 @@ import { loadScript } from "../../lib/script"
 
 export default function ActivationHandler() {
   useEffect(() => {
-    loadScript(`${process.env.BetaAxg}/layoutactivationJs`)
+    loadScript(`${process.env.LocalAxg}/layoutactivationJs`)
     .then(() => activationHandler.init())
   }, [])
   return '';

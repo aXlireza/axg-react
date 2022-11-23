@@ -23,11 +23,6 @@ export default function Button({
   activecolor,
   hovercolor,
 } = {}) {
-  
-  useEffect(() => {
-    if (document.getElementById(id) && onClick) test.addEventListener('click', onClick)
-  }, [])
-
   return <axg-element
     mode={mode || 'button_v1'}
     dev={dev}

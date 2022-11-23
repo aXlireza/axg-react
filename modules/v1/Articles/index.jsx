@@ -1,7 +1,6 @@
-import dynamic from 'next/dynamic'
-const Carousel = dynamic(() => import('../../axg-react/Carousel'), {ssr: false,})
-const PostTemplate = dynamic(() => import('../PostTemplate'), {ssr: false,})
-const SectionHead = dynamic(() => import('../SectionHead'), {ssr: false,})
+import Carousel from "../../../Carousel";
+import PostTemplate from "../PostTemplate";
+import SectionHead from "../SectionHead";
 
 export default function Articles({posts}) {
 
@@ -15,7 +14,7 @@ export default function Articles({posts}) {
       customclasses={'carousel_item articlessize'}
       innerclasses={'carousel_inneritem round_l1 articlesinnersize'}
       title={post.title}
-      link={post.link}
+      link={`/blog/${post.slug}`}
       date={`${date.getFullYear()} ${months[date.getMonth()]} ${date.getDate()}`}
     />
   })

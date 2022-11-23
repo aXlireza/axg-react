@@ -1,8 +1,8 @@
 import dynamic from 'next/dynamic'
 
 export default function SectionHead({title, btnTitle, btnLink, textcustomclasses, textcolor, subtextcolor}) {
-  const Text = dynamic(() => import('../../axg-react/Text'), {ssr: false,})
-  const Button = dynamic(() => import('../../axg-react/Button'), {ssr: false,})
+  const Text = dynamic(() => import('../../../Text'), {ssr: false,})
+  const Button = dynamic(() => import('../../../Button'), {ssr: false,})
   return (
     <>
       {/* TODO: This icon has to be a left carrot, but since we ain't got any for now, i'm putting a random icon */}

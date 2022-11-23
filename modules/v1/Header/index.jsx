@@ -1,8 +1,8 @@
 import dynamic from "next/dynamic";
 import { useState } from "react";
 import { useEffect } from "react";
-import { fetchposts } from '../../lib/posts'
-const HeaderComponent = dynamic(() => import('../../axg-react/Header'), {ssr: false,})
+import { fetchposts } from '../../../../lib/posts'
+const HeaderComponent = dynamic(() => import('../../../Header'), {ssr: false,})
 
 export default function Header() {
   const [posts, setPosts] = useState([])
