@@ -19,13 +19,12 @@ export default function Topnav() {
     <section className={'container horizontal horizontalTabletBreak padding_l0 widePadding_l3'} style={{borderBottom: '1px solid #0001'}}>
       <section className={'subcontainer horizontal horizontalTabletBreak fitWidth'}>
         <section className={'subcontainer'}>{custombtn('info@sainax.com', 'mailto:info@sainax.com', 'address-book rx_light', 'hidetextontablet')}</section>
-        <section className={'subcontainer'}>{custombtn('شنبه - پنج شنبه', '/blog', 'address-book rx_light', 'hidetextontablet')}</section>
-        <section className={'subcontainer'}>{custombtn('+(123) 1234-567-8901', 'tel:1233456', 'address-book rx_light', 'hidetextonmobile')}</section>
+        <section className={'subcontainer'}>{custombtn('021-86044653', 'tel:02186044653', 'address-book rx_light')}</section>
       </section>
       <section className={'subcontainer horizontal horizontalTabletBreak fitWidth'}>
-        <section className={'subcontainer'}>{custombtn('', '/blog', 'address-book rx_light', 'nocolgap')}</section>
-        <section className={'subcontainer'}>{custombtn('', '/blog', 'address-book rx_light', 'nocolgap')}</section>
-        <section className={'subcontainer'}>{custombtn('', '/blog', 'address-book rx_light', 'nocolgap')}</section>
+        <section className={'subcontainer'}>{custombtn('', 'https://twitter.com/SainaGostar', 'address-book rx_light', 'nocolgap')}</section>
+        <section className={'subcontainer'}>{custombtn('', 'https://www.linkedin.com/company/saina-gostar/', 'address-book rx_light', 'nocolgap')}</section>
+        <section className={'subcontainer'}>{custombtn('', 'https://www.instagram.com/saina.gostar/', 'address-book rx_light', 'nocolgap')}</section>
       </section>
     </section>
   )

@@ -22,12 +22,7 @@ export default function SectionHead({title, btnTitle, btnLink, textcustomclasses
       textcolor={textcolor}
       textclasses={`nomargin widePadding_l9 ${textcustomclasses}`}
       textalign={'lefty'}
-      textfontsize={'var(--l9-text-fontSize)'}
-      subtext={title}
-      subtextcolor={subtextcolor}
-      subtextclasses={'subcontainer lefty nomargin wide abitoffthetop'}
-      subtextalign={'righty'}
-      subtextfontsize={'var(--l7-text-fontSize)'}
+      textfontsize={'var(--l7-text-fontSize)'}
     />
   </>
   )

@@ -17,11 +17,12 @@ export default function Hero({title, subtitle}) {
     >
       <section className="subcontainer vertical lefty">
         <Text
+          tag={'h1'}
           text={title}
           textcolor={'#fff'}
           textclasses={'subcontainer lefty nomargin wide'}
           textalign={'lefty'}
-          textfontsize={'var(--l9-text-fontSize)'}
+          textfontsize={'var(--l7-text-fontSize)'}
           innercustomclasses={'wide_important'}
         />
         <Text

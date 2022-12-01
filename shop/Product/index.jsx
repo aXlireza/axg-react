@@ -82,16 +82,16 @@ export default function Product({area, image, alt, name, price, currency, descri
         id="mainContent"
         className={`rtl container splitToLeft horizontal ${formStyle.outerDom}`}
       >
-        <section className="subcontainer">
+        {image ? <section className="subcontainer">
           <div style={{display: 'block', width:'100%', height: '100%', position: 'relative'}}>
-            <Image
+             <Image
               src={image}
               loading={'eager'}
               alt={alt}
               customclasses={'round_l1'}
             />
           </div>
-        </section>
+        </section> : ''}
         <section className="subcontainer">
           <section className="subcontainer centerOnTablet" style={{rowGap: '0px'}}>
             <section className="subcontainer" style={{columnGap: '7px', width: 'fit-content'}}>
@@ -111,7 +111,7 @@ export default function Product({area, image, alt, name, price, currency, descri
           {/* request button */}
           <section className="subcontainer centerOnTablet" style={{rowGap: '0px'}}>
             <Button
-              text={'ثبت درخواست'}
+              text={'ثبت سفارش'}
               iconclasses={'font_l5 round_l1 rexfont_init address-book rx_light'}
               innerclasses={'padding_l3 round_l1'}
               customclasses={'rtl'}
@@ -120,6 +120,7 @@ export default function Product({area, image, alt, name, price, currency, descri
               color={'var(--light)'}
               plane={'1'}
               id={'orderbtn'}
+              textclasses={'betterwordspacing'}
             />
             <Text textclasses={'nomargin centerOnTablet'} text={"*بزودی بعد ثبت درخواست و پر کردن فرم, با شما تماس گرفته خواهد شد"} color={"var(--secondaryTextColor)"} textfontsize={"var(--l1-text-fontSize)"} />
           </section>

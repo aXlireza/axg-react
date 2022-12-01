@@ -1,4 +1,4 @@
-export default function Text({ innercustomclasses, textalign, subtextalign, svg, textfontsize, link, textcolor, textclasses, subtext, subtextclasses, subtextcolor, subtextfontsize, iconclass, svgtextfontsize, dev, align, children, tag='h1', color='var(--dark)', text='', customclasses, inlinestyle, nomargin=0 }) {
+export default function Text({ innercustomclasses, textalign, subtextalign, svg, textfontsize, link, textcolor, textclasses, subtext, subtextclasses, subtextcolor, subtextfontsize, iconclass, svgtextfontsize, dev, align, children, tag='h2', color='var(--dark)', text='', customclasses, inlinestyle, nomargin=0 }) {
   return <axg-element
     mode={'text_v1'}
     dev={dev}
@@ -19,5 +19,6 @@ export default function Text({ innercustomclasses, textalign, subtextalign, svg,
     subtextalign={subtextalign}
     innercustomclasses={innercustomclasses}
     inlinestyle={inlinestyle}
+    tag={tag}
   />
 }

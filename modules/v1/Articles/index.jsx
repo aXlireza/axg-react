@@ -27,9 +27,7 @@ export default function Articles({posts}) {
             title={'مقالات ساینا'}
             btnTitle={'همه مقالات'}
             btnLink={'/blog'}
-            textcustomclasses={'textstrokeblue'}
-            textcolor={'var(--primaryColor)'}
-            subtextcolor={'#fff'}
+            textcolor={'#fff'}
           />
         </section>
 

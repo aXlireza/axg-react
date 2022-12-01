@@ -37,7 +37,8 @@ export default function Footer() {
           textfontsize={'var(--l3-text-fontSize)'}
           innercustomclasses={'wide_important'}
         />
-        {custombtn('شنبه - پنج شنبه', '/blog', 'address-book rx_light')}
+        {custombtn('021-86044653', 'tel:02186044653', 'address-book rx_light')}
+        {custombtn('0912-5400667', 'tel:09125400667', 'address-book rx_light')}
       </section>
       <section className={'subcontainer vertical lefty norowgap'}>
         {customTitle('خدمات ساینا گستر')}

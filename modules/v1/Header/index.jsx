@@ -95,15 +95,6 @@ export default function Header() {
       },
       {
         structure: 'link',
-        name: 'تماس با ما',
-        link: '/contact-us',
-        color: 'var(--primaryColor)',
-        activeColor: 'var(--tertiaryTextColor)',
-        activeBg: 'var(--primaryColor)',
-        dir: 'rtl',
-      },
-      {
-        structure: 'link',
         name: 'وبلاگ',
         link: '/blog',
         color: 'var(--primaryColor)',
@@ -113,8 +104,8 @@ export default function Header() {
       },
       {
         structure: 'link',
-        name: 'درباره ساینا',
-        link: '/about-us',
+        name: 'تماس با ما',
+        link: '/contact-us',
         color: 'var(--primaryColor)',
         activeColor: 'var(--tertiaryTextColor)',
         activeBg: 'var(--primaryColor)',

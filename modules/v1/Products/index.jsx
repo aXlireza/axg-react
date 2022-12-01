@@ -7,12 +7,11 @@ export default function Articles({posts}) {
   const postsList = posts.map((post, key) => <PostTemplate
     key={key}
     postbg={'#fff'}
-    image={post.thumbnail}
+    image={post.thumbnail || null}
     customclasses={'carousel_item articlessize'}
     innerclasses={'carousel_inneritem articlesinnersize productsListBorder'}
     title={post.title}
     link={`/shop/${post.acf.order_area.slug}/${post.slug}`}
-    date={'محصولات ساینا را بررسی کنید'}
   />)
 
   return (
@@ -24,9 +23,7 @@ export default function Articles({posts}) {
             title={'محصولات ساینا'}
             btnTitle={'همه محصولات'}
             btnLink={'/shop'}
-            textcustomclasses={'textstrokewhite'}
-            textcolor={'#fff'}
-            subtextcolor={'var(--primaryColor)'}
+            textcolor={'var(--primaryColor)'}
           />
         </section>
 
