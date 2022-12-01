@@ -25,6 +25,7 @@ export default function Header({searchbar, dir, menuGroup, searchbardisplay=true
           labelclasses={searchbar.labelclasses}
           inputcovercustomclasses={searchbar.inputcovercustomclasses}
           reslistcustomclasses={searchbar.reslistcustomclasses}
+          customstyles={searchbar.customstyles}
         />: ''}
         <Menu dir={dir} menuGroup={menuGroup} menuItems={menuItems} />
       </header>

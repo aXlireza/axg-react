@@ -8,7 +8,7 @@ export default function SectionHead({title, btnTitle, btnLink, textcustomclasses
       {/* TODO: This icon has to be a left carrot, but since we ain't got any for now, i'm putting a random icon */}
       <Button
       text={btnTitle}
-      iconclasses={'secondary_bg round_l1 padding_l2 rexfont_init address-book rx_light'}
+      iconclasses={'tertiary_color secondary_bg round_l1 padding_l2 rexfont_init address-book rx_light'}
       innerclasses={'padding_l0'}
       size='large'
       bg={'#0000'}

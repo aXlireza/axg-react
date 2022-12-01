@@ -20,5 +20,5 @@ export default function Text({ innercustomclasses, textalign, subtextalign, svg,
     innercustomclasses={innercustomclasses}
     inlinestyle={inlinestyle}
     tag={tag}
-  />
+  >{children}</axg-element>
 }

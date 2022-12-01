@@ -18,19 +18,8 @@ export default function Searchbar({
   labelclasses,
   inputcovercustomclasses,
   reslistcustomclasses,
+  customstyles,
 }) {
-
-  // useEffect(() => {
-  //   window['all_posts_names'] = all_posts_names;
-  //   window['all_posts_links'] = all_posts_links;
-  // }, [all_posts_names, all_posts_links])
-  
-  // const serachHandler = async () => {
-  //   const icons = await fetch(`${process.env.RexfontAPI}/icons/`).then(res => res.json())
-  //   setAll_posts_names(icons.map(icon => icon.name))
-  //   setAll_posts_links(icons.map(icon => `/icons/${icon.name}/${icon.style}`))
-  // }
-  
   return <axg-element
     mode='searchbar_v2'
     reslistcustomclasses={reslistcustomclasses}
@@ -52,5 +41,6 @@ export default function Searchbar({
     dir={dir}
     labelclasses={labelclasses}
     inputcovercustomclasses={inputcovercustomclasses}
+    customstyles={customstyles}
   ></axg-element>
 }

@@ -26,36 +26,47 @@ export default function Footer() {
     innercustomclasses={'wide_important'}
   />
   return (
-    <section className={'container topy horizontal'} style={{backgroundColor: '#0a1229'}}>
-      <section className={'subcontainer vertical lefty'}>
-        {customTitle('شعار ساینا گسنر')}
-        <Text
-          text={'توضیحات اولیه شرکت ساینا گستر. توضیحات اولیه شرکت ساینا گستر .توضیحات اولیه شرکت ساینا گستر. توضیحات اولیه شرکت ساینا گستر.'}
-          textcolor={'#9ca5af'}
-          textclasses={'subcontainer nomargin wide textright rtl'}
-          textalign={'righty'}
-          textfontsize={'var(--l3-text-fontSize)'}
-          innercustomclasses={'wide_important'}
-        />
-        {custombtn('021-86044653', 'tel:02186044653', 'address-book rx_light')}
-        {custombtn('0912-5400667', 'tel:09125400667', 'address-book rx_light')}
+    <>
+      <section className={'container topy horizontal'} style={{backgroundColor: '#0a1229'}}>
+        <section className={'subcontainer vertical lefty'}>
+          {customTitle('شعار ساینا گسنر')}
+          <Text
+            text={'توضیحات اولیه شرکت ساینا گستر. توضیحات اولیه شرکت ساینا گستر .توضیحات اولیه شرکت ساینا گستر. توضیحات اولیه شرکت ساینا گستر.'}
+            textcolor={'#9ca5af'}
+            textclasses={'subcontainer nomargin wide textright rtl'}
+            textalign={'righty'}
+            textfontsize={'var(--l3-text-fontSize)'}
+            innercustomclasses={'wide_important'}
+          />
+          {custombtn('021-86044653', 'tel:02186044653', 'address-book rx_light')}
+          {custombtn('0912-5400667', 'tel:09125400667', 'address-book rx_light')}
+        </section>
+        <section className={'subcontainer vertical lefty norowgap'}>
+          {customTitle('خدمات ساینا گستر')}
+          {custombtn('مورد اول', '/blog')}
+          {custombtn('مورد اول', '/blog')}
+          {custombtn('مورد اول', '/blog')}
+          {custombtn('مورد اول', '/blog')}
+          {custombtn('مورد اول', '/blog')}
+        </section>
+        <section className={'subcontainer vertical lefty norowgap'}>
+          {customTitle('اطلاعات دفتر ساینا')}
+          {custombtn('مورد اول', '/blog', 'address-book rx_light')}
+          {custombtn('مورد اول', '/blog', 'address-book rx_light')}
+          {custombtn('مورد اول', '/blog', 'address-book rx_light')}
+          {custombtn('مورد اول', '/blog', 'address-book rx_light')}
+          {custombtn('مورد اول', '/blog', 'address-book rx_light')}
+        </section>
       </section>
-      <section className={'subcontainer vertical lefty norowgap'}>
-        {customTitle('خدمات ساینا گستر')}
-        {custombtn('مورد اول', '/blog')}
-        {custombtn('مورد اول', '/blog')}
-        {custombtn('مورد اول', '/blog')}
-        {custombtn('مورد اول', '/blog')}
-        {custombtn('مورد اول', '/blog')}
+      <section className={'container'}>
+      <Text
+        textcolor={'#9ca5af'}
+        textclasses={'subcontainer nomargin wide textright rtl'}
+        textalign={'lefty'}
+        textfontsize={'var(--l3-text-fontSize)'}
+        innercustomclasses={'wide_important'}
+      ><span className={'rtl'}>تمام حقوق این سایت برای شرکت ساینا گستر تدبیر پارسیان محفوظ میباشد. توسعه یافته در مجموعه <a href="https://axoncodes.com">Axoncodes</a></span></Text>
       </section>
-      <section className={'subcontainer vertical lefty norowgap'}>
-        {customTitle('اطلاعات دفتر ساینا')}
-        {custombtn('مورد اول', '/blog', 'address-book rx_light')}
-        {custombtn('مورد اول', '/blog', 'address-book rx_light')}
-        {custombtn('مورد اول', '/blog', 'address-book rx_light')}
-        {custombtn('مورد اول', '/blog', 'address-book rx_light')}
-        {custombtn('مورد اول', '/blog', 'address-book rx_light')}
-      </section>
-    </section>
+    </>
   )
 }

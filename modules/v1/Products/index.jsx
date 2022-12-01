@@ -17,28 +17,16 @@ export default function Articles({posts}) {
   return (
     <>
       <section className="container vertical padding_l0">
-
         <section className="subcontainer horizontal righty padding_l3">
           <SectionHead
             title={'محصولات ساینا'}
             btnTitle={'همه محصولات'}
             btnLink={'/shop'}
             textcolor={'var(--primaryColor)'}
+            subtextcolor={'var(--primaryColor)'}
           />
         </section>
-
-        <section className={'container wide'}>
-          <Carousel
-            fademode={'fade'}
-            name={'articles'}
-            carouselmode={'relative'}
-            customstyle={"height: 100px;"}
-            slidescovergap={0}
-            contentclasses={'topy'}
-            leftnav={'0'}
-          >{postsList}</Carousel>
-        </section>
-
+        <section className={'container wide'}>{postsList}</section>
       </section>
     </>
   )

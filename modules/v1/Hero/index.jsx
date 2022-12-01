@@ -2,7 +2,7 @@ import dynamic from 'next/dynamic'
 const Text = dynamic(() => import('../../../Text'), {ssr: false,})
 const Button = dynamic(() => import('../../../Button'), {ssr: false,})
 
-export default function Hero({title, subtitle}) {
+export default function Hero({title, subtitle, children}) {
   return (
     <section
       className="container vertical lefty"
@@ -16,16 +16,16 @@ export default function Hero({title, subtitle}) {
       }}
     >
       <section className="subcontainer vertical lefty">
-        <Text
+        {title ? <Text
           tag={'h1'}
           text={title}
           textcolor={'#fff'}
           textclasses={'subcontainer lefty nomargin wide'}
           textalign={'lefty'}
-          textfontsize={'var(--l7-text-fontSize)'}
+          textfontsize={'var(--l8-text-fontSize)'}
           innercustomclasses={'wide_important'}
-        />
-        <Text
+        /> : ''}
+        {subtitle ? <Text
           text={subtitle}
           textcolor={'#e0e0e0'}
           textclasses={'subcontainer nomargin wide textright rtl'}
@@ -33,7 +33,8 @@ export default function Hero({title, subtitle}) {
           textfontsize={'var(--l4-text-fontSize)'}
           innercustomclasses={'wide_important'}
           customclasses={'paragraphAtHero'}
-        />
+        /> : ''}
+        {children}
       </section>
       <section className='subcontainer horizontal lefty horizontalTabletBreak'>
         <Button

@@ -27,6 +27,7 @@ export default function Header() {
       labelclasses: 'subcontainer lefty hoversearchcoverlabel',
       inputcovercustomclasses: 'subcontainer vertical',
       reslistcustomclasses: 'boxshadow darker rtl',
+      customstyles: 'width: 45%;'
     }}
     dir={'rtl'}
     menuGroup={{

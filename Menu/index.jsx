@@ -4,7 +4,6 @@ export default function Menu({dir, menuGroup, menuItems}) {
     <>
       <axg-element
         mode={'dropdown_v4'}
-        dev={'staging'}
         structure={'dropdownGroup'}
         headTitlecolor={menuGroup.headTitlecolor}
         height={menuGroup.height}
@@ -19,12 +18,12 @@ export default function Menu({dir, menuGroup, menuItems}) {
         subTrigger={menuGroup.subTrigger}
         dropdownid={menuGroup.dropdownid}
         dir={dir}
+        liststyle={'column-gap: 2vw'}
       >
         {menuItems.map((item, key) => (
           <axg-element
             key={key}
             mode={'dropdown_v4'}
-            dev={'staging'}
             height={item.height || menuGroup.height}
             color={item.color || menuGroup.color}
             colorHover={item.activeColor || menuGroup.colorHover}

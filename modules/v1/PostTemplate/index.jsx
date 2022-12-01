@@ -29,7 +29,7 @@ export default function PostTemplate({
             subtext={title}
             subtextclasses={`nomargin weight_l9`}
             subtextcolor={'#001659'}
-            subtextfontsize={'var(--l6-text-fontSize)'}
+            subtextfontsize={'var(--l5-text-fontSize)'}
             text={date}
             textcolor={'#565969'}
             textfontsize={'var(--l2-text-fontSize)'}

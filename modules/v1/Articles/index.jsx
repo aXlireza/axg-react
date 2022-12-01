@@ -24,25 +24,13 @@ export default function Articles({posts}) {
       <section className="container vertical padding_l0 primary_bg">
         <section className="subcontainer horizontal righty padding_l3">
           <SectionHead
-            title={'مقالات ساینا'}
+            title={'آخرین مطالب ساینا گستر'}
             btnTitle={'همه مقالات'}
             btnLink={'/blog'}
             textcolor={'#fff'}
           />
         </section>
-
-        <section className={'container wide'}>
-          <Carousel
-            fademode={'fade'}
-            name={'articles'}
-            carouselmode={'relative'}
-            customstyle={"height: 170px;"}
-            slidescovergap={0}
-            contentclasses={'topy'}
-            leftnav={'0'}
-          >{postsList}</Carousel>
-        </section>
-
+        <section className={'container wide'}>{postsList}</section>
       </section>
     </>
   )
