@@ -22,7 +22,7 @@ export default function Hero({title, subtitle, children}) {
           textcolor={'#fff'}
           textclasses={'subcontainer lefty nomargin wide'}
           textalign={'lefty'}
-          textfontsize={'var(--l8-text-fontSize)'}
+          textfontsize={'var(--l7-text-fontSize)'}
           innercustomclasses={'wide_important'}
         /> : ''}
         {subtitle ? <Text
