@@ -22,7 +22,7 @@ export default function Topnav() {
         <section className={'subcontainer'}>{custombtn('021-86044653', 'tel:02186044653', 'address-book rx_light')}</section>
       </section>
       <section className={'subcontainer horizontal horizontalTabletBreak fitWidth'}>
-        <section className={'subcontainer'}>{custombtn('', 'https://www.instagram.com/saina.gostar/', 'fa-brands fa-square-instagram', 'nocolgap')}</section>
+        <section className={'subcontainer'}>{custombtn('', 'https://www.instagram.com/saina.gostar/', 'fa-brands fa-instagram-square', 'nocolgap')}</section>
         <section className={'subcontainer'}>{custombtn('', 'https://twitter.com/SainaGostar', 'address-book rx_light', 'nocolgap')}</section>
         <section className={'subcontainer'}>{custombtn('', 'https://www.linkedin.com/company/saina-gostar/', 'address-book rx_light', 'nocolgap')}</section>
       </section>
