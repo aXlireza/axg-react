@@ -68,7 +68,7 @@ export default function Header() {
         exit: '1',
         options: [
           {
-            title: 'سیمان تهران',
+            title: 'سیمان تهران پاکتی',
             url: '/shop/tehran-cement',
             level: 'undertab',
             color: 'var(--secondaryColor)',
@@ -84,8 +84,15 @@ export default function Header() {
                 activeBg: 'var(--secondaryColor)',
               },
               {
-                title: 'تیپ 2',
+                title: 'سیمان تیپ 2',
                 url: '/shop/tehran-cement/type-2',
+                level: 'undertab',
+                color: '#fff',
+                dir: 'rtl',
+              },
+              {
+                title: 'سیمان تیپ 5',
+                url: '/shop/tehran-cement/type-5',
                 level: 'undertab',
                 color: '#fff',
                 dir: 'rtl',
