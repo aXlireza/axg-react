@@ -38,8 +38,16 @@ export default function Footer() {
             textfontsize={'var(--l3-text-fontSize)'}
             innercustomclasses={'wide_important'}
           />
-          {custombtn('021-86044653', 'tel:02186044653', 'address-book rx_light')}
-          {custombtn('0912-5400667', 'tel:09125400667', 'address-book rx_light')}
+          <section className={'subcontainer horizontal horizontalTabletBreak fitWidth'}>
+            <section className={'subcontainer'}>{custombtn('021-86044653', 'tel:02186044653', 'address-book rx_light')}</section>
+            <section className={'subcontainer'}>{custombtn('0912-5400667', 'tel:09125400667', 'address-book rx_light')}</section>
+          </section>
+          <section className={'subcontainer horizontal horizontalTabletBreak fitWidth'}>
+          <section className={'subcontainer'}>{custombtn('info@sainax.com', 'mailto:info@sainax.com', 'address-book rx_light', 'hidetextontablet')}</section>
+            <section className={'subcontainer'}>{custombtn('', 'https://www.instagram.com/saina.gostar/', 'fa-brands fa-instagram-square', 'nocolgap')}</section>
+            <section className={'subcontainer'}>{custombtn('', 'https://twitter.com/SainaGostar', 'address-book rx_light', 'nocolgap')}</section>
+            <section className={'subcontainer'}>{custombtn('', 'https://www.linkedin.com/company/saina-gostar/', 'address-book rx_light', 'nocolgap')}</section>
+          </section>
         </section>
         <section className={'subcontainer vertical lefty norowgap'}>
           {customTitle('خدمات ساینا گستر')}
@@ -58,14 +66,15 @@ export default function Footer() {
           {custombtn('مورد اول', '/blog', 'address-book rx_light')}
         </section>
       </section>
-      <section className={'container'}>
-      <Text
-        textcolor={'#9ca5af'}
-        textclasses={'subcontainer nomargin wide textright rtl'}
-        textalign={'lefty'}
-        textfontsize={'var(--l3-text-fontSize)'}
-        innercustomclasses={'wide_important'}
-      ><span className={'rtl'}>تمام حقوق این سایت برای شرکت ساینا گستر تدبیر پارسیان محفوظ میباشد. توسعه یافته در مجموعه <a href="https://axoncodes.com">Axoncodes</a></span></Text>
+      <section className={'container rtl secondary_bg tertiary_color'}>
+        <Text
+          textcolor={'#9ca5af'}
+          textclasses={'subcontainer nomargin wide textright rtl center'}
+          textalign={'center'}
+          customclasses={'center'}
+          textfontsize={'var(--l3-text-fontSize)'}
+          innercustomclasses={'wide_important'}
+        ><span className={'font_l3 rtl center'}>تمام حقوق این سایت برای شرکت ساینا گستر تدبیر پارسیان محفوظ میباشد. توسعه یافته در مجموعه <a href="https://axoncodes.com" target={'_blank'}>Axoncodes</a></span></Text>
       </section>
     </>
   )
