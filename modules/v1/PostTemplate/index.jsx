@@ -41,7 +41,7 @@ export default function PostTemplate({
           {/* shoudl be a plus icon! */}
           <Button
             text={'مشاهده جزئیات'}
-            iconclasses={'font_l5 round_l1 padding_l2 rexfont_init address-book rx_light'}
+            iconclasses={'font_l2 round_l1 padding_l1 fa-solid fa-plus'}
             innerclasses={'padding_l0'}
             customclasses={'nohovershadow highlightIconOnHover rtl'}
             size='large'

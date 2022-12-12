@@ -112,8 +112,8 @@ export default function Product({area, image, alt, name, price, currency, descri
           <section className="subcontainer centerOnTablet" style={{rowGap: '0px'}}>
             <Button
               text={'ثبت سفارش'}
-              iconclasses={'font_l5 round_l1 rexfont_init address-book rx_light'}
-              innerclasses={'padding_l3 round_l1'}
+              iconclasses={'font_l3 round_l1 fa-solid fa-cart-plus'}
+              innerclasses={'padding_l2 round_l1'}
               customclasses={'rtl'}
               size={'medium'}
               bg={'var(--blue)'}
