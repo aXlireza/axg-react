@@ -122,7 +122,7 @@ export default function Product({area, image, alt, name, price, currency, descri
               id={'orderbtn'}
               textclasses={'betterwordspacing'}
             />
-            <Text textclasses={'nomargin centerOnTablet'} text={"*بزودی بعد ثبت درخواست و پر کردن فرم, با شما تماس گرفته خواهد شد"} color={"var(--secondaryTextColor)"} textfontsize={"var(--l1-text-fontSize)"} />
+            <Text textclasses={'nomargin'} text={"*بزودی بعد ثبت درخواست و پر کردن فرم, با شما تماس گرفته خواهد شد"} color={"var(--secondaryTextColor)"} textfontsize={"var(--l1-text-fontSize)"} />
           </section>
 
           {/* separator */}
