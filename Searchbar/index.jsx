@@ -19,6 +19,8 @@ export default function Searchbar({
   inputcovercustomclasses,
   reslistcustomclasses,
   customstyles,
+  formclasses,
+  outformclasses,
 }) {
   return <axg-element
     mode='searchbar_v2'
@@ -42,5 +44,7 @@ export default function Searchbar({
     labelclasses={labelclasses}
     inputcovercustomclasses={inputcovercustomclasses}
     customstyles={customstyles}
+    formclasses={formclasses}
+    outformclasses={outformclasses}
   ></axg-element>
 }
