@@ -22,6 +22,7 @@ export default function Button({
   textclasses,
   activecolor,
   hovercolor,
+  blank,
 } = {}) {
   return <axg-element
     mode={mode || 'button_v1'}
@@ -44,5 +45,6 @@ export default function Button({
     textclasses={textclasses}
     activecolor={activecolor}
     hovercolor={hovercolor}
+    blank={blank}
   ></axg-element>
 }
