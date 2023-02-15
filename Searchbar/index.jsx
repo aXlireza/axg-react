@@ -21,9 +21,11 @@ export default function Searchbar({
   customstyles,
   formclasses,
   outformclasses,
+  dev,
 }) {
   return <axg-element
     mode='searchbar_v2'
+    dev={dev}
     reslistcustomclasses={reslistcustomclasses}
     preactive={preactive}
     checked={checked}
