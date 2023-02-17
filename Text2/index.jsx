@@ -1,0 +1,47 @@
+export default function Text({
+  orderdirection,
+  innercustomclasses,
+  textalign,
+  subtextalign,
+  svg,
+  textfontsize,
+  link,
+  textcolor,
+  textclasses,
+  subtext,
+  subtextclasses,
+  subtextcolor,
+  subtextfontsize,
+  iconclass,
+  dev,
+  children,
+  tag='h2',
+  text='',
+  customclasses,
+  inlinestyle,
+  nomargin=0,
+}) {
+  return <axg-element
+    mode={'text_v2'}
+    dev={dev}
+    customclasses={customclasses}
+    nomargin={nomargin}
+    link={link}
+    text={text}
+    textfontsize={textfontsize}
+    textcolor={textcolor}
+    textclasses={textclasses}
+    subtext={subtext}
+    subtextclasses={subtextclasses}
+    subtextcolor={subtextcolor}
+    subtextfontsize={subtextfontsize}
+    iconclass={iconclass}
+    svg={svg}
+    textalign={textalign}
+    subtextalign={subtextalign}
+    innercustomclasses={innercustomclasses}
+    inlinestyle={inlinestyle}
+    tag={tag}
+    orderdirection={orderdirection}
+  >{children}</axg-element>
+}
