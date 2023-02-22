@@ -40,7 +40,6 @@ export default function Header({searchbar, dir, menuGroup, searchbardisplay=true
           <axg-element
             key={key}
             mode={'dropdown_body_v4'}
-            dev={"staging"}
             exit={item.exit}
             headTitle={item.headTitle}
             headTitlecolor={item.headTitlecolor}
