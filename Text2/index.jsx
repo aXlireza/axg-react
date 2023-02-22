@@ -1,4 +1,6 @@
+
 export default function Text({
+  alt,
   orderdirection,
   innercustomclasses,
   textalign,
@@ -24,6 +26,7 @@ export default function Text({
   return <axg-element
     mode={'text_v2'}
     dev={dev}
+    alt={alt}
     customclasses={customclasses}
     nomargin={nomargin}
     link={link}
@@ -31,14 +34,14 @@ export default function Text({
     textfontsize={textfontsize}
     textcolor={textcolor}
     textclasses={textclasses}
+    textalign={textalign}
     subtext={subtext}
     subtextclasses={subtextclasses}
     subtextcolor={subtextcolor}
     subtextfontsize={subtextfontsize}
+    subtextalign={subtextalign}
     iconclass={iconclass}
     svg={svg}
-    textalign={textalign}
-    subtextalign={subtextalign}
     innercustomclasses={innercustomclasses}
     inlinestyle={inlinestyle}
     tag={tag}

@@ -1,11 +1,9 @@
-import { useEffect } from 'react'
 
 export default function Button({
   iconclasses,
   plane,
   roundlevel,
   customclasses,
-  onClick,
   iconSize,
   icon,
   height,
@@ -22,6 +20,7 @@ export default function Button({
   textclasses,
   activecolor,
   hovercolor,
+  hoverbg,
   blank,
 } = {}) {
   return <axg-element
@@ -45,6 +44,7 @@ export default function Button({
     textclasses={textclasses}
     activecolor={activecolor}
     hovercolor={hovercolor}
+    hoverbg={hoverbg}
     blank={blank}
   ></axg-element>
 }
