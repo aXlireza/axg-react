@@ -2,7 +2,6 @@
 export default function Accordion_head({
   dev,
   text,
-  active,
   bg,
   color,
   customclasses,
@@ -16,7 +15,6 @@ export default function Accordion_head({
     mode='accordion_head_v2'
     dev={dev}
     text={text}
-    active={active}
     bg={bg}
     color={color}
     customclasses={customclasses}
