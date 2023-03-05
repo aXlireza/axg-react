@@ -5,7 +5,6 @@ export default function Text({
   innercustomclasses,
   textalign,
   subtextalign,
-  svg,
   textfontsize,
   link,
   textcolor,
@@ -14,7 +13,7 @@ export default function Text({
   subtextclasses,
   subtextcolor,
   subtextfontsize,
-  iconclass,
+  icon,
   dev,
   children,
   tag='h2',
@@ -40,8 +39,7 @@ export default function Text({
     subtextcolor={subtextcolor}
     subtextfontsize={subtextfontsize}
     subtextalign={subtextalign}
-    iconclass={iconclass}
-    svg={svg}
+    icon={icon}
     innercustomclasses={innercustomclasses}
     inlinestyle={inlinestyle}
     tag={tag}

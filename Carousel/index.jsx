@@ -1,3 +1,4 @@
+
 export default function Carousel({
 	contentclasses,
 	children,
@@ -8,10 +9,11 @@ export default function Carousel({
 	rightnav,
 	leftnav,
 	slidescovergap,
+	dev,
 }) {
 	return <axg-element
-		mode='carousel_v2'
-		dev=''
+		mode={'carousel_v2'}
+		dev={dev}
 		fademode={fademode}
 		name={name}
 		carouselmode={carouselmode}
