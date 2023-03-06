@@ -1,11 +1,19 @@
+
 import style from './style.module.css'
-import Input from '../../components/Input'
+import Input from '../Input'
 import { useState, useEffect } from 'react'
 import xjs from '@axoncodes/xjs'
 import dynamic from 'next/dynamic'
 
 const Text = dynamic(() => import('../Text'), {ssr: false,})
-export default function Filter({ filterPrefix, targetId, filterPlacement, elementId, elements, catFilter }) {
+export default function Filter({
+  filterPrefix,
+  targetId,
+  filterPlacement,
+  elementId,
+  elements,
+  catFilter
+}) {
 
   const [filters, setFilters] = useState([])
   
