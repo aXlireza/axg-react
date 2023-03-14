@@ -1,6 +1,5 @@
 
 export default function Menu({
-  key,
   dev,
   exit,
   headTitle,
@@ -23,7 +22,6 @@ export default function Menu({
 }) {
   return (
     <axg-element
-      key={key}
       mode={'dropdown_body_v4'}
       dev={dev}
       exit={exit}
