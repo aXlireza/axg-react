@@ -2,7 +2,27 @@ import React from "react";
 import style from  './style.module.css'
 import { useState } from 'react'
 
-export default function Input({ size, width, height, preactive, checked, sidepadding, padding, bgColor, color, filterid, onInput, onClick, tag='input', name, type='text', value, label, id, options }) {
+export default function Input({
+  size,
+  width,
+  height,
+  preactive,
+  checked,
+  sidepadding,
+  padding,
+  bgColor,
+  color,
+  filterid,
+  onInput,
+  onClick,
+  tag='input',
+  name,
+  type='text',
+  value,
+  label,
+  id,
+  options
+}) {
   
   const [inputstate, setInputstate] = useState(0)
 
@@ -24,7 +44,14 @@ export default function Input({ size, width, height, preactive, checked, sidepad
   }
   
   return (
-    <div className={`${size ? style[size] : ''} ${sidepadding ? style.sidepadding : ''} ${padding ? style.padding : ''} ${style.div}`} style={{width:width, height: height, backgroundColor: bgColor, color: color}}>
+    <div
+      className={`
+        ${size ? style[size] : ''} 
+        ${sidepadding ? style.sidepadding : ''} 
+        ${padding ? style.padding : ''} 
+        ${style.div}
+      `}
+      style={{width: width, height: height, backgroundColor: bgColor, color: color}}>
       {
         React.createElement(
           tag,

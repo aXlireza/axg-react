@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 import xjs from '@axoncodes/xjs'
 import dynamic from 'next/dynamic'
 
-const Text = dynamic(() => import('../Text'), {ssr: false,})
+const Text = dynamic(() => import('../Text2'), {ssr: false,})
 export default function Filter({
   filterPrefix,
   targetId,
@@ -37,7 +37,7 @@ export default function Filter({
   }
 
   const filterScript = (tmpFilters) => {
-    if (tmpFilters.length == 0)document.querySelectorAll(`#${targetId} .${filterPlacement}`).forEach(element => {element.classList.remove('hide')})
+    if (tmpFilters.length == 0) document.querySelectorAll(`#${targetId} .${filterPlacement}`).forEach(element => {element.classList.remove('hide')})
     else {
       document.querySelectorAll(`#${targetId} .${filterPlacement}`).forEach(element => {
         let toHide = false
@@ -62,9 +62,24 @@ export default function Filter({
     <div className={style.body} id={elementId}>
       {elements.map((filter, i) => (
         <div key={i}>
-          <Text tag="p" key={i} text={filter.name} />
+          <Text tag="p" key={i} text={filter.name} textclasses={filter.classes} />
           <ul className={style.ul}>{filter.items.map((item, j) => (
-            <li className={style.li} key={j}><Input preactive={filters.filter(filter => filter.toLowerCase() == item.name.toLowerCase()).length > 0} checked={filters.filter(filter => filter.toLowerCase() == item.name.toLowerCase()).length > 0} label={item.label} onInput={handleFiltersClick} id={`${elementId}${i}${j}`} tag={item.tag} type={item.type} name={item.name} /></li>
+            <li
+              className={style.li}
+              key={j}
+            >
+              <Input
+                preactive={filters.filter(filter => filter.toLowerCase() == item.name.toLowerCase()).length > 0}
+                checked={filters.filter(filter => filter.toLowerCase() == item.name.toLowerCase()).length > 0}
+                label={item.label}
+                onInput={handleFiltersClick}
+                id={`${elementId}${i}${j}`}
+                tag={item.tag}
+                type={item.type}
+                name={item.name}
+                color={item.inputColor}
+              />
+            </li>
           ))}</ul>
         </div>
       ))}

@@ -21,9 +21,13 @@ export default function Text({
   customclasses,
   inlinestyle,
   nomargin=0,
+  id,
+  onClick,
 }) {
   return <axg-element
     mode={'text_v2'}
+    onclick={onClick}
+    id={id}
     dev={dev}
     alt={alt}
     customclasses={customclasses}

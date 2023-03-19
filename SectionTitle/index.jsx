@@ -1,4 +1,4 @@
-import Text from '../Text';
+import Text from '../Text2';
 
 export default function SectionTitle({ customclasses, title, textclasses }) {
   return (

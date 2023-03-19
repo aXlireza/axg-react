@@ -3,9 +3,7 @@ export default function Menu({dir, menuGroup, menuItems}) {
   return (
     <>
       <axg-element
-        dev={menuGroup.dev}
-        mode={'dropdown_v5'}
-        text={JSON.stringify(menuGroup.text)}
+        mode={'dropdown_v4'}
         structure={'dropdownGroup'}
         headTitlecolor={menuGroup.headTitlecolor}
         height={menuGroup.height}
@@ -24,10 +22,8 @@ export default function Menu({dir, menuGroup, menuItems}) {
       >
         {menuItems.map((item, key) => (
           <axg-element
-            dev={item.dev}
-            text={JSON.stringify(item.text)}
             key={key}
-            mode={'dropdown_v5'}
+            mode={'dropdown_v4'}
             height={item.height || menuGroup.height}
             color={item.color || menuGroup.color}
             colorHover={item.activeColor || menuGroup.colorHover}
