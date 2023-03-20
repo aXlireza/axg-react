@@ -20,10 +20,12 @@ export default function DropdownHead({
     subopening,
     background,
     dir,
+    text,
 }) {
     return <axg-element
     dev={dev}
     mode={'dropdown_v5'}
+    text={JSON.stringify(text)}
     height={height}
     color={color}
     colorHover={colorHover}
