@@ -62,7 +62,7 @@ export default function Filter({
     <div className={style.body} id={elementId}>
       {elements.map((filter, i) => (
         <div key={i}>
-          <Text tag="p" key={i} text={filter.name} textclasses={filter.classes} />
+          <Text tag="p" key={i} text={filter.name} customclasses={filter.customclasses} textclasses={filter.textclasses} />
           <ul className={style.ul}>{filter.items.map((item, j) => (
             <li
               className={style.li}
