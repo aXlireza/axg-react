@@ -20,6 +20,7 @@ export default function Menu({dir, menuGroup, menuItems}) {
         subTrigger={menuGroup.subTrigger}
         dropdownid={menuGroup.dropdownid}
         dir={dir}
+        customclasses={menuGroup.customclasses}
         liststyle={'column-gap: 2vw'}
       >
         {menuItems.map((item, key) => (
