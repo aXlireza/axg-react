@@ -23,10 +23,11 @@ export default function Text({
   nomargin=0,
   id,
   onClick,
-  name,
+  arialabel,
 }) {
   return <axg-element
     mode={'text_v2'}
+    arialabel={arialabel}
     onclick={onClick}
     id={id}
     dev={dev}
@@ -49,6 +50,5 @@ export default function Text({
     inlinestyle={inlinestyle}
     tag={tag}
     orderdirection={orderdirection}
-    name={name}
   >{children}</axg-element>
 }
