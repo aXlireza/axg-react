@@ -3,9 +3,8 @@ import style from './style.module.css'
 import Input from '../Input'
 import { useState, useEffect } from 'react'
 import xjs from '@axoncodes/xjs'
-import dynamic from 'next/dynamic'
+import Text from '../../builtin-axg/text/v2'
 
-const Text = dynamic(() => import('../Text2'), {ssr: false,})
 export default function Filter({
   filterPrefix,
   targetId,

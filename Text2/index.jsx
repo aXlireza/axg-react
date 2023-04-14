@@ -28,7 +28,7 @@ export default function Text({
   return <axg-element
     mode={'text_v2'}
     arialabel={arialabel}
-    onclick={onClick}
+    onClick={onClick}
     id={id}
     dev={dev}
     alt={alt}

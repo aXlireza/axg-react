@@ -1,4 +1,4 @@
-import Text from '../Text2';
+import Text from "../../builtin-axg/text/v2";
 
 export default function SectionTitle({ customclasses, title, textclasses }) {
   return (
